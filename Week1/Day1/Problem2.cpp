@@ -18,4 +18,4 @@ int main() {
 	}
 	cout << count;
 }
-git commit -m "[백준 3052 배열 나머지 구하기] https://www.acmicpc.net/problem/3052
+
