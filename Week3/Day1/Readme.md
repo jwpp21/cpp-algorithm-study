@@ -50,7 +50,7 @@ for (int k = 0;k < n;k++) {
 if (count == n)
 	break;
 ```
-###### 버블 정렬 단순 구현
+###### 버블 정렬 깔끔 구현
 ```
 
 	for (int i = 0;i < n - 1;i++) {
@@ -65,6 +65,48 @@ if (count == n)
 	if(!isSwapper)
 		break;
 	cout << endl;
+}
+```
+##### 삽입 정렬
+
+###### 삽입 정렬 내 구현
+```
+int index = 0;
+for (int i = 0;i < n - 1;i++) {
+	if (arr[i] > arr[i + 1]) {
+		int tmp = arr[i+1];
+		int j = i+1;
+		for(j;j>0;j--) {
+			if (arr[j] < tmp) {
+				index = j+1;
+				break;
+			}
+			arr[j] = arr[j-1];
+			Print(arr, n);
+		}
+		arr[index] = tmp;
+	}
+	Print(arr, n);
+}
+```
+###### 삽입 정렬 깔끔한 구현
+```
+{
+	int arr[] = { 1, 2, 4, 5, 3, 6 };
+	int n = sizeof(arr) / sizeof(arr[0]);
+
+	int i, key, j;
+	for (i = 1;i < n;i++) {
+		key = arr[i];
+
+		for (j = i; j > 0 && arr[j - 1] > key;j--) {
+			arr[j] = arr[j - 1];
+			Print(arr, n);
+		}
+		arr[j] = key;
+
+		Print(arr, n);
+	}
 }
 ```
 ---
