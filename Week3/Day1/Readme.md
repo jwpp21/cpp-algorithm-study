@@ -36,6 +36,35 @@
 	}
 }
 ```
+##### 버블 정렬
+- 모든 값들을 한번씩 비교 -> 이미 정렬된 배열에 유리함.
+- stable함.
+###### 버블 정렬 조기 종료 코드 내 구현
+```
+for (int k = 0;k < n;k++) {
+	if (arr[k] == arr[ii++])
+		count++;
+}
+if (count == n)
+	break;
+```
+###### 버블 정렬 단순 구현
+```
+
+	for (int i = 0;i < n - 1;i++) {
+		bool isSwapped = false
+		for (int j = 0;j < n - 1 - i;j++) {
+			if (arr1[j] > arr1[j + 1]) {
+				swap(arr1[j], arr1[j + 1]);
+				isSwapped = true
+			}
+			Print(arr, n);
+	}
+	if(!isSwapper)
+		break;
+	cout << endl;
+}
+```
 ---
 
 ✅ 오늘의 목표 달성!
