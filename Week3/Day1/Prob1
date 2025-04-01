@@ -63,12 +63,15 @@ int main()
 	for (int i = 0; i < 26; i++)
 	{
 		// 힌트: char(i + 97)
-
+		table[i] = Count(arr, n, char(i+97));
 		// 표를 만들고 나중에 몰아서 출력하는 방법
 		// table[i] = ...
 
 		// 표를 만들지 않고 직접 출력하는 방법
 		// ...
+		if (Count(arr, n, char(i + 97)) != 0) {
+			cout << char(i + 97)  << Count(arr, n, char(i + 97));
+		}
 	}
 
 	cout << endl;
@@ -77,6 +80,9 @@ int main()
 	for (int i = 0; i < 26; i++)
 	{
 		// ...
+		if (Count(arr, n, char(i + 97)) != 0) {
+			cout << char(i + 97) << table[i];
+		}
 	}
 	cout << endl << endl;
 
@@ -98,11 +104,19 @@ int main()
 		if (arr[i] == c)
 		{
 			// TODO: ...
+			count++;
 		}
 		else
 		{
 			// TODO: ...
+			cout << count;
+
+			count = 1;
+			c = arr[i];
+			cout << c;
+
 		}
+
 	}
 
 	cout << count << endl; // 마지막 count 출력
