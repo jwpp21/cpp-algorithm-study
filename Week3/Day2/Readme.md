@@ -98,3 +98,78 @@ void main()
     print_poly(c);
 }
 ```
+##### 배열의 응용 - 희소행렬
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+
+typedef struct {
+    int row;
+    int col;
+    int value;
+} element;
+
+typedef struct SparseMatrix {
+    element data[20];
+    int rows;   
+    int cols;   
+    int terms;  
+} SparseMatrix;
+
+void matrix_print(SparseMatrix a) {
+    int index = 0;
+    for (int i = 0; i < a.rows; i++) {
+        for (int j = 0; j < a.cols; j++) {
+            int found = 0;
+            for (int k = 0; k < a.terms; k++) {
+                if (a.data[k].row == i && a.data[k].col == j) {
+                    printf("%d ", a.data[k].value);
+                    found = 1;
+                    break;
+                }
+            }
+            if (!found) {
+                printf("0 ");
+            }
+        }
+        printf("\n");
+    }
+    printf("\n");
+}
+
+SparseMatrix change(SparseMatrix m, int i, int j) {
+    if (i < 0 || i >= m.rows || j < 0 || j >= m.rows) {
+        printf("잘못된 행 인덱스입니다.\n");
+        exit(1);
+    }
+    for (int k = 0; k < m.terms; k++) {
+        if (m.data[k].row == i) {
+            m.data[k].row = j;
+        }
+        else if (m.data[k].row == j) {
+            m.data[k].row = i;
+        }
+    }
+    return m;
+}
+
+int main() {
+    SparseMatrix m1 = {
+        { {0, 0, 2}, {0, 2, -3}, {1, 2, 4}, {2, 0, 4}, {2, 1, -2}, {2, 2, 1}, {3, 3, 3} },
+        4, 4, 7
+    };
+
+    printf("원래 행렬:\n");
+    matrix_print(m1);
+
+    int i = 0; 
+    int j = 2; 
+    SparseMatrix m_changed = change(m1, i, j);
+
+    printf("행 %d과 행 %d을 교환한 후:\n", i, j);
+    matrix_print(m_changed);
+
+    return 0;
+}
+```
