@@ -9,3 +9,4 @@
 - https://www.acmicpc.net/problem/10798
 - https://www.acmicpc.net/problem/2563
 - https://www.acmicpc.net/problem/1193
+- https://www.acmicpc.net/problem/2869
