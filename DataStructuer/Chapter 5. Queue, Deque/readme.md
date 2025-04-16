@@ -8,7 +8,7 @@
 
 #### 선형큐
 - 배열로 구현.
-```
+```cpp
 #include <stdio.h>
 #include <stdlib.h>
 #define MAX_QUEUE_SIZE 5
@@ -84,7 +84,7 @@ int dequeue(QueueType *q)
 #### 원형큐
 - front와 rear의 값이 배열의 끝인 MAX_QUEUE_SIZE-1에 도착하면 다음 값이 0이 되도록 하는 자료구조
 - 방법은 front = (front+1) % MAX_QUEUE_SIZE; <<<
-```
+```cpp
 #include <iostream>
 #include <cstdlib>
 using namespace std;
@@ -156,7 +156,7 @@ element peek(QueueType* q) {
 - double-ended queue의 줄임말로서 큐의 front,  rear에서 모두 삽입과 삭제가 가능한 큐를 의미함.
 - 그러나 여전히 중간에서 삽입 삭제는 불가능.
 
-```
+```cpp
 #include <stdio.h>
 #define MAX_DEQUE 5
 
