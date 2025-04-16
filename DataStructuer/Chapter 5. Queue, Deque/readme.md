@@ -150,3 +150,123 @@ element peek(QueueType* q) {
 	return q->data[q->rear];
 }
 ```
+
+---
+### 덱(DEQUE)
+- double-ended queue의 줄임말로서 큐의 front,  rear에서 모두 삽입과 삭제가 가능한 큐를 의미함.
+- 그러나 여전히 중간에서 삽입 삭제는 불가능.
+
+```
+#include <stdio.h>
+#define MAX_DEQUE 5
+
+typedef int element;
+typedef struct {
+    int front;
+    int rear;
+    element data[MAX_DEQUE];
+} DequeType;
+
+void init_deque(DequeType *dq)
+{
+    dq->front = 0;
+    dq->rear = 0;
+}
+
+int is_empty(DequeType *dq)
+{
+    if(dq->front == dq->rear)
+        return 1; //공백 상태
+    else
+        return 0;
+}
+
+int is_full(DequeType *dq)
+{
+    if(dq->front == (dq->rear + 1) % MAX_DEQUE)
+        return 1; //포화 상태
+    else
+        return 0;
+}
+
+void add_front(DequeType *dq, element item)
+{
+    if(is_full(dq) == 1){
+        printf("full\n");
+    }
+    else{
+        dq->data[dq->front] = item;
+        dq->front = (dq->front - 1 + MAX_DEQUE) % MAX_DEQUE;
+    }
+}
+
+void add_rear(DequeType *dq, element item)
+{
+    if(is_full(dq) == 1){
+        printf("full\n");
+    }
+    else{
+        dq->rear = (dq->rear + 1) % MAX_DEQUE;
+        dq->data[dq->rear] = item;
+    }
+}
+
+int delete_front(DequeType *dq)
+{
+    if(is_empty(dq) == 1){
+        printf("empty\n");
+    }
+    else{
+        dq->front = (dq->front + 1) % MAX_DEQUE;
+        return dq->data[dq->front];
+    }
+}
+
+int delete_rear(DequeType *dq)
+{
+    element item;
+    if(is_empty(dq) == 1){
+        printf("empty\n");
+    }
+    else{
+        item = dq->data[dq->rear];
+        dq->rear = (dq->rear - 1 + MAX_DEQUE) % MAX_DEQUE;
+        return item;
+    }
+}
+
+int get_front(DequeType *dq)
+{
+    if(is_empty(dq) == 1){
+        printf("empty\n");
+    }
+    else{
+        return dq->data[(dq->front + 1) % MAX_DEQUE];
+    }
+}
+
+int get_rear(DequeType *dq)
+{
+    if(is_empty(dq) == 1){
+        printf("empty\n");
+    }
+    else{
+        return dq->data[dq->rear];
+    }
+}
+
+void print_deque(DequeType *dq)
+{
+    printf("(front = %d rear = %d) = ", dq->front, dq->rear);
+    if(!is_empty(dq) == 1){
+        int i = dq->front;
+        do{
+            i = (i + 1) % MAX_DEQUE;
+            printf("%d | ", dq->data[i]);
+            if(i == dq->rear)
+                break;
+        } while(i != dq->front);
+        printf("\n");
+    }
+}
+```
