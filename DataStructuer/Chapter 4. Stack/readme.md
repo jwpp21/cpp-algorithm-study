@@ -9,7 +9,7 @@
 - 스택엔 push, pop 두가지 연산이 존재함.
 - 배열을 통해 구현해볼거고 top변수는 항상 스택의 제일 윗 값의 위치를 나타냄. 스택에 아무것도 없다면 top은 항상 -1
 
-```
+```cpp
 #define MAX_STACK_SIZE 100
 
 typedef int element;
