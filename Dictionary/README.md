@@ -20,6 +20,7 @@
 - https://www.acmicpc.net/problem/1181
 - https://www.acmicpc.net/submit/10814
 - https://www.acmicpc.net/problem/1920
+- https://www.acmicpc.net/problem/1676
 
 
 
