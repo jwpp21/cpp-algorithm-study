@@ -142,3 +142,8 @@ cin은 '\n'를 처리하지 않고 입력버퍼에 남겨둔다.
 geline은 '\n'를 입력버퍼에서 가져와서 처리한다. 
 cin.ignore();는 버퍼 전체를 비우는것이 아니라 맨 앞의 문자하나를 지운다.
 getline(읽어올 입력스트림, 저장할 문자열변수)
+
+
+// c++ 라이브러리 활용한 중복제거 패턴
+sort(vec.begin(), vec.end()); // 먼저 정렬
+vec.erase(unique(vec.begin(), vec.end()), vec.end()); // 중복 제거
