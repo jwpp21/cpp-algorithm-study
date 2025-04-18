@@ -18,6 +18,7 @@
 - https://www.acmicpc.net/problem/2609
 - https://www.acmicpc.net/problem/10989
 - https://www.acmicpc.net/problem/1181
+- https://www.acmicpc.net/submit/10814
 
 
 
