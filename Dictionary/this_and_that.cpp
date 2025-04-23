@@ -147,3 +147,7 @@ getline(읽어올 입력스트림, 저장할 문자열변수)
 // c++ 라이브러리 활용한 중복제거 패턴
 sort(vec.begin(), vec.end()); // 먼저 정렬
 vec.erase(unique(vec.begin(), vec.end()), vec.end()); // 중복 제거
+
+// 백분율 구하는 방법
+ex) 5의 15퍼센트
+>>> 5 * (15/100.0)
