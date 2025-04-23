@@ -23,7 +23,7 @@
 - https://www.acmicpc.net/problem/1676
 - https://www.acmicpc.net/problem/1018
 - https://www.acmicpc.net/problem/2839
-
+- https://www.acmicpc.net/problem/1929
 
 
 
