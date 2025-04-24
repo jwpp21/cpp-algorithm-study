@@ -179,3 +179,6 @@ i*i <= n까지만 반복하면 돼
 // 이진탐색 팁
 auto minIndex = lower_bound(v.begin(), v.end(), target); // 이런식으로 target이 들어갈 수 있는 최소 인덱스를 뽑아낼 수 있음.
 auto maxIndex = upper_bound(v.begin(), v.end(), target); // 마찬가지
+// 이진탐색 STL 라이브러리
+binary_search(vec.begin(), vec.end(), target);
+binary_search 함수는 true/false 반환
