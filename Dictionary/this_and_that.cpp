@@ -182,3 +182,6 @@ auto maxIndex = upper_bound(v.begin(), v.end(), target); // 마찬가지
 // 이진탐색 STL 라이브러리
 binary_search(vec.begin(), vec.end(), target);
 binary_search 함수는 true/false 반환
+
+// map은 똑같은 key에 대해 중복저장이 되지 않는다. >>>> 이말의 의미
+	-> 늦게 들어온 값이 무조건적으로 자료구조에 남는다는 거겠죠
