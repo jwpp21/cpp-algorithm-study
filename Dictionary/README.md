@@ -30,6 +30,7 @@
 - https://www.acmicpc.net/problem/2346
 - https://www.acmicpc.net/problem/10799
 - https://www.acmicpc.net/problem/2504
+- https://www.acmicpc.net/problem/11478
 
 
 
@@ -63,3 +64,5 @@
 - 1935
 ##### 4/26
 - 19532, 2750, 2587, 25305, 1427, 18870, 28279, 2346, 24511, 10799, 2504
+##### 4/27
+- 14425, 7785, 1620, 1764, 1269, 11478, 4358
