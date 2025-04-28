@@ -33,6 +33,7 @@
 - https://www.acmicpc.net/problem/11478
 - https://www.acmicpc.net/problem/2075
 - https://www.acmicpc.net/problem/7662
+- https://www.acmicpc.net/problem/22942
 
 
 
@@ -69,4 +70,4 @@
 ##### 4/27
 - 14425, 7785, 1620, 1764, 1269, 11478, 4358
 ##### 4/28
-- 2075, 11279, 11286, 7662, 
+- 2075, 11279, 11286, 7662, 22942
